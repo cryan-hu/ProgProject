@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ 
+
+<Storingen>
+	<Ongepland>
+		
+			<Storing>
+				<id>prio-92029</id>
+			    
+					<Traject>Leiden C.-Alphen a/d Rijn</Traject>
+			    
+				
+					<Reden>defecte spoorbrug</Reden>
+			    
+				
+				
+					<Bericht><![CDATA[Tussen Lammenschans en Alphen a/d Rijn rijden geen treinen door een defecte spoorbrug.Er rijden snelbussen tussen Lammenschans en Alphen a/d Rijn.Houdt u rekening met een extra reistijd van 30 - 60 min.Het is nog niet bekend hoe lang dit duurt.Reizigers naar Leiden C. kunnen reizen via Den Haag C.. Extra reistijd: 15 minuten.
+]]></Bericht>
+			    
+				
+					<Datum>2016-11-09T16:26:00+0100</Datum>
+			    
+				
+			</Storing>
+		
+	</Ongepland>
+	<Gepland>
+		
+	</Gepland>
+</Storingen>
