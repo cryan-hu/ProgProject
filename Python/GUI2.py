@@ -18,7 +18,7 @@ class NSApp():
 
 
         #constanten:
-        self.locatieAutomaat = 'ac' #verander voor ander station
+        self.locatieAutomaat = 'ut' #verander voor ander station
         self.naamLang = "Breda"
         self.nummer = []
         self.ritnummer = []
@@ -30,6 +30,9 @@ class NSApp():
         self.vertrekspoor = []
         self.spoorwijziging = []
         self.routetekst = []
+        self.reistip = []
+        self.opmerkingen = []
+
         self.tijd = StringVar(value=time.strftime("%H:%M:%S"))
         self.NSgeel = "#fece22"
         self.NSblauw = "#002272"
@@ -58,7 +61,7 @@ class NSApp():
         with open('vertrektijden.csv', 'w', newline='', encoding="UTF-8") as bestand:
             i = 0
             schrijf = csv.writer(bestand, delimiter=';')
-            schrijf.writerow(('nummer','ritnummer', 'vertrektijd', 'eindbestemming', 'treinsoort','vertrekspoor', 'spoorwijziging', 'vervoerder', 'routetekst','vertraging'))
+            schrijf.writerow(('nummer','ritnummer', 'vertrektijd', 'eindbestemming', 'treinsoort','vertrekspoor', 'spoorwijziging', 'vervoerder', 'routetekst','vertraging','reistip','opmerkingen'))
             for vertrek in self.apicall('https://webservices.ns.nl/ns-api-avt?station='+self.locatieAutomaat)['ActueleVertrekTijden']['VertrekkendeTrein']:
                 eindbestemming = vertrek['EindBestemming']
                 ritnummer = vertrek['RitNummer']
@@ -76,8 +79,15 @@ class NSApp():
                     routetekst = "Via {}".format(vertrek['RouteTekst'])
                 except KeyError:
                     routetekst = ""
-
-                schrijf.writerow((i,ritnummer, vertrektijdUurMin, eindbestemming, treinsoort, spoor, spoorWijziging, vervoerder,routetekst,vertraging))
+                try:
+                    reistip= vertrek['ReisTip']
+                except KeyError:
+                    reistip = ""
+                try:
+                    opmerkingen = vertrek['Opmerkingen']['Opmerking']
+                except KeyError:
+                    opmerkingen = ""
+                schrijf.writerow((i,ritnummer, vertrektijdUurMin, eindbestemming, treinsoort, spoor, spoorWijziging, vervoerder,routetekst,vertraging,reistip,opmerkingen))
                 i += 1
 
     def labels(self):
@@ -94,6 +104,8 @@ class NSApp():
                 self.vervoerder.append(rij['vervoerder'])
                 self.routetekst.append(rij['routetekst'])
                 self.vertraging.append(rij['vertraging'])
+                self.reistip.append(rij['reistip'])
+                self.opmerkingen.append(rij['opmerkingen'])
 
     def hoofdKnoppen(self):
         self.knoppenFrame = Frame(self.tk,bg=self.NSgeel)
@@ -110,7 +122,7 @@ class NSApp():
     def venster1(self):
         self.knoppenFrame.place_forget()
         self.knoppenFrame2=Frame(self.tk,bg=self.NSgeel)
-        self.knoppenFrame2.place(anchor=NW,y=60)
+        self.knoppenFrame2.place(anchor=NW,y=40)
         self.ditStationKnop = Button(self.knoppenFrame2,text="Toon vertrektijden\ndit station",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4,command=self.venster2)
         self.ditStationKnop.pack()
         self.anderStationKnop = Button(self.knoppenFrame2,text="Toon vertrektijden\nander station",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4)
@@ -120,7 +132,7 @@ class NSApp():
     def venster2(self):
         self.knoppenFrame2.place_forget()
         self.terugKnop = Button(self.tk, text="Terug", font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4, command=self.terug)
-        self.terugKnop.place(anchor=NW,y=60)
+        self.terugKnop.place(anchor=NW,y=40)
         self.Layout()
 
     def terug(self):
@@ -141,7 +153,7 @@ class NSApp():
 
 
         self.hoofdframe= Frame(self.tk, bg=self.NSblauw, width=400, height=400)
-        self.hoofdframe.pack(pady=(60, 120), side=TOP, expand=True, fill=Y)
+        self.hoofdframe.pack(pady=(40, 90), side=TOP, expand=True, fill=Y)
         self.bovenframe = Frame(self.hoofdframe,bg=self.NSblauw)
         self.bovenframe.grid(row=0,columnspan=4,padx=5, pady=5)
         tekst = "Vertrektijden {}".format(self.naamLang)
@@ -196,6 +208,8 @@ class NSApp():
         treinsoortLabel = list(range(self.lengteVertrek))
         routetekstLabel = list(range(self.lengteVertrek))
         vertragingLabel = list(range(self.lengteVertrek))
+        reistipLabel = list(range(self.lengteVertrek))
+        opmerkingenLabel = list(range(self.lengteVertrek))
         n=self.start
         m=0
         for vertrek in range(self.start,self.stop):
@@ -213,6 +227,10 @@ class NSApp():
             vervoerderLabel[m] = Label(self.vertrekframe[m],text=self.vervoerder[n],fg="#1162BF", font=self.tekstFont).grid(row=1,column=1, sticky=W)
             treinsoortLabel[m] = Label(self.vertrekframe[m],text=self.treinsoort[n],fg="#1162BF", font=self.tekstFont).grid(row=1,column=2,sticky=W)
             routetekstLabel[m] = Label(self.vertrekframe[m],text=self.routetekst[n], fg="#1162BF", font=('Helvetica',11)).grid(row=2,column=1,columnspan=3, sticky=W)
+            if self.reistip[n] != "":
+                reistipLabel[m] = Label(self.vertrekframe[m],text=self.reistip[n], fg="#1162BF", font=('Helvetica',10)).grid(row=3,column=1,columnspan=3, sticky=W)
+            if self.opmerkingen[n] != "":
+                opmerkingenLabel[m] = Label(self.vertrekframe[m],text=self.opmerkingen[n], fg="#1162BF", font=('Helvetica',10)).grid(row=4,column=1,columnspan=3, sticky=W)
             n+=1
             m+=1
 
