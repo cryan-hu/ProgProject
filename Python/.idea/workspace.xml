@@ -35,8 +35,8 @@
       <file leaf-file-name="GUI2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GUI2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="134" column="42" selection-start-line="134" selection-start-column="42" selection-end-line="134" selection-end-column="42" />
+            <state relative-caret-position="445">
+              <caret line="139" column="20" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -57,8 +57,8 @@
       <file leaf-file-name="apicsv.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apicsv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="19" selection-end-column="53" />
+            <state relative-caret-position="170">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="22" selection-end-column="65" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -129,7 +129,6 @@
       <list>
         <option value="$PROJECT_DIR$/CSN.py" />
         <option value="$PROJECT_DIR$/../../Python/les9/stap3.py" />
-        <option value="$PROJECT_DIR$/apicsv.py" />
         <option value="$PROJECT_DIR$/apixml.py" />
         <option value="$PROJECT_DIR$/Versie2.py" />
         <option value="$PROJECT_DIR$/Versie1.py" />
@@ -137,6 +136,7 @@
         <option value="$PROJECT_DIR$/Versie3.py" />
         <option value="$PROJECT_DIR$/GUI1.py" />
         <option value="$PROJECT_DIR$/GUI3.py" />
+        <option value="$PROJECT_DIR$/apicsv.py" />
         <option value="$PROJECT_DIR$/GUI2.py" />
       </list>
     </option>
@@ -201,23 +201,6 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Python.GUI2">
-    <configuration default="false" name="Versie3" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Versie3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="GUI1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -282,6 +265,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apixml.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="apicsv" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apicsv.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -434,19 +434,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.Versie3" />
-      <item index="1" class="java.lang.String" itemvalue="Python.GUI1" />
-      <item index="2" class="java.lang.String" itemvalue="Python.GUI2" />
-      <item index="3" class="java.lang.String" itemvalue="Python.GUI3" />
-      <item index="4" class="java.lang.String" itemvalue="Python.apixml" />
+      <item index="0" class="java.lang.String" itemvalue="Python.GUI1" />
+      <item index="1" class="java.lang.String" itemvalue="Python.GUI2" />
+      <item index="2" class="java.lang.String" itemvalue="Python.GUI3" />
+      <item index="3" class="java.lang.String" itemvalue="Python.apixml" />
+      <item index="4" class="java.lang.String" itemvalue="Python.apicsv" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.GUI2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.apixml" />
-        <item index="2" class="java.lang.String" itemvalue="Python.GUI3" />
-        <item index="3" class="java.lang.String" itemvalue="Python.GUI1" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Versie3" />
+        <item index="1" class="java.lang.String" itemvalue="Python.apicsv" />
+        <item index="2" class="java.lang.String" itemvalue="Python.apixml" />
+        <item index="3" class="java.lang.String" itemvalue="Python.GUI3" />
+        <item index="4" class="java.lang.String" itemvalue="Python.GUI1" />
       </list>
     </recent_temporary>
   </component>
@@ -839,16 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apicsv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="19" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Versie3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -871,6 +861,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI3.py" />
+    <entry file="file://$PROJECT_DIR$/apixml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apivertrektijdenenstations.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -881,18 +879,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apixml.py">
+    <entry file="file://$PROJECT_DIR$/apicsv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="22" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="134" column="42" selection-start-line="134" selection-start-column="42" selection-end-line="134" selection-end-column="42" />
+        <state relative-caret-position="445">
+          <caret line="139" column="20" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>

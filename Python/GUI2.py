@@ -13,8 +13,8 @@ class NSApp():
         self.tk.resizable(width=False, height=False)
         #self.tk.geometry("1186x890")
         self.tk.geometry("1024x768")
-        label = Label(self.tk, image=background, text="hello")
-        label.place(x=0, y=0, relwidth=1, relheight=1)
+        self.achtergrond = Label(self.tk, image=backgroundStart, text="hello")
+        self.achtergrond.place(x=0, y=0, relwidth=1, relheight=1)
 
 
         #constanten:
@@ -41,6 +41,7 @@ class NSApp():
         self.fontHoofdknop = 'Helvetica',11,"bold"
         self.lengteVertrek = 6
 
+        self.stations()
         self.vertrektijdenCsv()
         self.labels()
         self.hoofdKnoppen()
@@ -120,6 +121,7 @@ class NSApp():
         knop4.grid(row=0,column=3, padx=5, pady=5)
 
     def venster1(self):
+        self.achtergrond.config(image=backgroundLeeg)
         self.knoppenFrame.place_forget()
         self.knoppenFrame2=Frame(self.tk,bg=self.NSgeel)
         self.knoppenFrame2.place(anchor=NW,y=40)
@@ -141,6 +143,7 @@ class NSApp():
         self.venster1()
 
     def terug2(self):
+        self.achtergrond.config(image=backgroundStart)
         self.knoppenFrame2.place_forget()
         self.hoofdKnoppen()
 
@@ -233,8 +236,19 @@ class NSApp():
                 opmerkingenLabel[m] = Label(self.vertrekframe[m],text=self.opmerkingen[n], fg="#1162BF", font=('Helvetica',10)).grid(row=4,column=1,columnspan=3, sticky=W)
             n+=1
             m+=1
+    def stations(self):
+        with open('stations.csv', 'w', newline='', encoding='UTF-8') as bestand:
+            schrijf = csv.writer(bestand, delimiter=';')
+            schrijf.writerow(('code','naamLang','naamMiddel','naamKort'))
+            for station in self.apicall('http://webservices.ns.nl/ns-api-stations-v2')['Stations']['Station']:
+                code = station['Code']
+                naamLang = station['Namen']['Lang']
+                naamMiddel = station['Namen']['Middel']
+                naamKort = station['Namen']['Kort']
+                schrijf.writerow((code,naamLang,naamMiddel,naamKort))
 
 root = Tk()
-background= PhotoImage(file="backgroundkleiner.png")
+backgroundStart= PhotoImage(file="backgroundkleiner.png")
+backgroundLeeg= PhotoImage(file="backgroundkleinerleeg.png")
 nsapp = NSApp(root)
 root.mainloop()
