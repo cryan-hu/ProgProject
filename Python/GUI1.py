@@ -4,11 +4,16 @@ import xmltodict
 import csv
 import time
 
+
+
 class NSApp():
     def __init__(self, tk):
         self.tk = tk
         self.tk.title("NS App")
-        self.tk.geometry("480x800")
+        self.tk.geometry("1186x890")
+        label = Label(self.tk, image=background, text="hello")
+        label.place(x=0, y=0, relwidth=1, relheight=1)
+
 
         #constanten:
         self.locatieAutomaat = 'ut' #verander voor ander station
@@ -24,10 +29,14 @@ class NSApp():
         self.spoorwijziging = []
         self.routetekst = []
         self.tijd = StringVar(value=time.strftime("%H:%M:%S"))
+        self.NSgeel = "#fece22"
+        self.NSblauw = "#002272"
+        self.NSwit = "#ffffff"
+        self.NSKnopBlauw ="#003399"
 
         self.vertrektijdenCsv()
         self.labels()
-        self.Layout()
+        self.hoofdKnoppen()
         self.updateTijd()
 
     def updateTijd(self):
@@ -67,9 +76,6 @@ class NSApp():
                 schrijf.writerow((i,ritnummer, vertrektijdUurMin, eindbestemming, treinsoort, spoor, spoorWijziging, vervoerder,routetekst,vertraging))
                 i += 1
 
-
-
-
     def labels(self):
         with open('vertrektijden.csv', 'r', newline='') as bestand:
             lees = csv.DictReader(bestand, delimiter=';')
@@ -85,6 +91,25 @@ class NSApp():
                 self.routetekst.append(rij['routetekst'])
                 self.vertraging.append(rij['vertraging'])
 
+    def hoofdKnoppen(self):
+        self.knoppenFrame = Frame(self.tk,bg=self.NSgeel)
+        self.knoppenFrame.place(relx=0.5, rely=0.65, anchor=CENTER)
+        self.knop1 = Button(self.knoppenFrame, text="Kopen los kaartje", bg=self.NSKnopBlauw, fg=self.NSwit)
+        self.knop1.grid(row=0,column=0, padx=5, pady=5)
+        self.knop2 = Button(self.knoppenFrame, text="Kopen OV-Chipkaart", bg=self.NSKnopBlauw, fg=self.NSwit)
+        self.knop2.grid(row=0,column=1, padx=5, pady=5)
+        self.knop3 = Button(self.knoppenFrame, text="Ik wil naar het buitenland", bg=self.NSKnopBlauw, fg=self.NSwit)
+        self.knop3.grid(row=0,column=2, padx=5, pady=5)
+        self.knop4 = Button(self.knoppenFrame, text="Toon actuele vertrektijden", bg=self.NSKnopBlauw, fg=self.NSwit, command=self.venster2)
+        self.knop4.grid(row=0,column=3, padx=5, pady=5)
+
+    def venster2(self):
+        self.knop1.grid_remove()
+        self.knop2.grid_remove()
+        self.knop3.grid_remove()
+        self.knop4.grid_remove()
+        self.Layout()
+
 
     def Layout(self):
         self.tekstFont = ('Courier',12)
@@ -93,8 +118,8 @@ class NSApp():
         self.verschil = 0
         self.start = 0
 
-        self.hoofdframe= Frame(self.tk)
-        self.hoofdframe.pack()
+        self.hoofdframe= Frame(self.tk, bg=self.NSwit, bd=3)
+        self.hoofdframe.place(relx=0.5, rely=0.4, anchor=CENTER)
         tekst = "Vertrektijden {}".format(self.naamLang)
         stationLabel = Label(self.hoofdframe,text=tekst,font=('Courier',16),fg="#53CCF5").grid(row=0,columnspan=3)
         if self.lengte > 8:
@@ -107,13 +132,7 @@ class NSApp():
         tijdLabel.grid(row=1,column=1)
         self.volgendeButton = Button(self.hoofdframe,text="Volgende", state=self.staat, command=self.volgende)
         self.volgendeButton.grid(row=1,column=2)
-
-
-
         self.vertrektijden()
-
-
-
 
     def volgende(self):
         for volgende in range(self.stop-self.start):
@@ -161,8 +180,8 @@ class NSApp():
                 self.perronFg = "red"
             elif self.spoorwijziging[n] == 'false':
                 self.perronFg = "#1162BF"
-            self.vertrekframe[m] = Frame(self.tk)
-            self.vertrekframe[m].pack(fill=X, padx=5, pady=5)
+            self.vertrekframe[m] = Frame(self.hoofdframe,height=120)
+            self.vertrekframe[m].grid(row=2+m, columnspan=3,padx=5, pady=5)
             tijdLabel[m] = Label(self.vertrekframe[m],text=self.vertrektijd[n],fg="#1162BF",relief=RIDGE,  font=self.tekstFont).grid(row=0, column=0,sticky=W)
             eindbestemmingLabel[m] = Label(self.vertrekframe[m],text=self.eindbestemming[n],relief=RIDGE,fg="#1162BF",font=('Courier',12, 'bold'), width=30).grid(row=0,column=1, columnspan=2)
             vertrekspoorLabel[m] = Label(self.vertrekframe[m],text=self.vertrekspoor[n],relief=RIDGE,fg=self.perronFg, font=('Courier',13, 'bold'), width=10).grid(row=0,column=3, sticky=E)
@@ -185,6 +204,9 @@ class NSApp():
 
 
 
+
+
 root = Tk()
+background= PhotoImage(file="background.gif")
 nsapp = NSApp(root)
 root.mainloop()
