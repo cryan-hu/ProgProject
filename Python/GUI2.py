@@ -3,7 +3,6 @@ import requests
 import xmltodict
 import csv
 import time
-import atexit
 
 
 
@@ -48,7 +47,6 @@ class NSApp():
         self.labels()
         self.hoofdKnoppen()
         self.updateTijd()
-        atexit.register(self.veranderterug)
 
     def updateTijd(self):
         self.tijd.set(time.strftime("%H:%M:%S"))
@@ -267,8 +265,6 @@ class NSApp():
         self.terugKnop3.place_forget()
         self.invoerFrame.place_forget()
         self.venster1()
-    def veranderterug(self):
-        self.locatie = self.locatieAutomaat
 
 
 
