@@ -15,17 +15,41 @@
 			    
 				
 				
-					<Bericht><![CDATA[Tussen Lammenschans en Alphen a/d Rijn rijden geen treinen door een defecte spoorbrug.Er rijden snelbussen tussen Lammenschans en Alphen a/d Rijn.Houdt u rekening met een extra reistijd van 30 - 60 min.Het is nog niet bekend hoe lang dit duurt.Reizigers naar Leiden C. kunnen reizen via Den Haag C.. Extra reistijd: 15 minuten.
+					<Bericht><![CDATA[Tussen Lammenschans en Alphen a/d Rijn rijden geen treinen door een defecte spoorbrug.Er rijden snelbussen tussen Lammenschans en Alphen a/d Rijn.Houdt u rekening met een extra reistijd van 30 - 60 min.De verstoring is naar verwachting 10 november rond 2:00 uur verholpen.
 ]]></Bericht>
 			    
 				
-					<Datum>2016-11-09T16:26:00+0100</Datum>
+					<Datum>2016-11-09T23:48:00+0100</Datum>
 			    
 				
 			</Storing>
 		
 	</Ongepland>
 	<Gepland>
+		
+			<Storing>
+				<id>2016_bd_ht_10nov</id>
+			    
+					<Traject>Breda-'s-Hertogenbosch</Traject>
+			    
+			    
+					<Periode>in de nacht van woensdag 9 op donderdag 10 november vanaf 23.30 uur</Periode>
+			    
+			    
+			    
+			    
+					<Bericht><![CDATA[<p>
+<b>Wanneer: in de nacht van woensdag 9 op donderdag 10 november vanaf 23.30 uur</b><br/>
+<b>Oorzaak: werkzaamheden</b><br/>
+<b>Advies: U kunt gebruikmaken van de overige treinen en de bussen</b>
+<br/>de laatste Sprinters tussen Breda en 's-Hertogenbosch rijden niet; er rijden stopbussen
+<br/> <br/>
+  <b>Extra reistijd: een kwartier tot drie kwartier</b><br/>
+</p>]]></Bericht>
+			    
+			    
+			    
+			</Storing>
 		
 	</Gepland>
 </Storingen>

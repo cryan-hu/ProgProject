@@ -1,1 +1,11 @@
-ritnummer;vertrektijd;vertraging;eindbestemming;treinsoort;vervoerder;vertrekspoor;spoorwijziging
+nummer;ritnummer;vertrektijd;eindbestemming;treinsoort;vertrekspoor;spoorwijziging;vervoerder;routetekst;vertraging
+0;1409;02:07;Rotterdam Centraal;Intercity;7;false;NS;Via Amsterdam CS, Schiphol Airport, Leiden C.;
+1;1413;03:07;Rotterdam Centraal;Intercity;5;false;NS;Via Amsterdam CS, Schiphol Airport, Leiden C.;
+2;1417;04:07;Rotterdam Centraal;Intercity;5;false;NS;Via Amsterdam CS, Schiphol Airport, Leiden C.;
+3;5710;05:06;Weesp;Sprinter;1;false;NS;Via Overvecht, Hilversum;
+4;14015;05:15;Rotterdam Centraal;Sprinter;11;false;NS;Via Woerden, Gouda;
+5;7408;05:17;Amsterdam Centraal;Sprinter;14;false;NS;Via Breukelen, Duivendrecht;
+6;5712;05:25;Weesp;Sprinter;3;false;NS;Via Overvecht, Hilversum;
+7;6015;05:27;Tiel;Sprinter;20;false;NS;Via Houten, Geldermalsen;
+8;9810;05:35;Den Haag Centraal;Sprinter;11;false;NS;Via Woerden, Gouda, Zoetermeer;
+9;14017;05:41;Rotterdam Centraal;Sprinter;8;false;NS;Via Woerden, Gouda;
