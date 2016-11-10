@@ -17,8 +17,8 @@ class NSApp():
 
 
         #constanten:
-        self.locatieAutomaat = 'ut' #verander voor ander station
-        self.naamLang = "Utrecht Centraal"
+        self.locatieAutomaat = 'bd' #verander voor ander station
+        self.naamLang = "Breda"
         self.nummer = []
         self.ritnummer = []
         self.vertrektijd = []
@@ -119,27 +119,27 @@ class NSApp():
 
 
     def Layout(self):
-        self.tekstFont = ('Courier',12)
+        self.tekstFont = ('Helvetica',12)
         self.lengte = len(self.nummer)
         self.stop = self.lengteVertrek
         self.verschil = 0
         self.start = 0
 
         self.hoofdframe= Frame(self.tk, bg=self.NSblauw)
-        self.hoofdframe.place(relx=0.5, rely=0.49, anchor=CENTER)
+        self.hoofdframe.place(relx=0.5, rely=0.45, anchor=CENTER)
         self.bovenframe = Frame(self.hoofdframe,bg=self.NSblauw)
         self.bovenframe.grid(row=0,columnspan=4,padx=5, pady=5)
         tekst = "Vertrektijden {}".format(self.naamLang)
-        stationLabel = Label(self.bovenframe,text=tekst,font=('Courier',17,"bold"),fg=self.NSwit,bg=self.NSblauw).grid(row=0,columnspan=3)
+        stationLabel = Label(self.bovenframe,text=tekst,font=('Helvetica',18,"bold"),fg=self.NSwit,bg=self.NSblauw).grid(row=0,columnspan=3)
         if self.lengte > self.lengteVertrek:
             self.staat = NORMAL
         else:
             self.staat = DISABLED
-        self.vorigeButton = Button(self.bovenframe,text="Vorige", state=DISABLED, command=self.vorige, fg=self.NSwit, bg=self.NSblauw)
+        self.vorigeButton = Button(self.bovenframe,text="Vorige", state=DISABLED, command=self.vorige, fg=self.NSwit, bg=self.NSblauw, font=("Helvetica", 10, "bold"))
         self.vorigeButton.grid(row=1,column=0)
-        tijdLabel = Label(self.bovenframe,textvariable=self.tijd, fg=self.NSwit, bg=self.NSblauw)
+        tijdLabel = Label(self.bovenframe,textvariable=self.tijd, fg=self.NSwit, bg=self.NSblauw, font=("Helvetica", 10, "bold"))
         tijdLabel.grid(row=1,column=1)
-        self.volgendeButton = Button(self.bovenframe,text="Volgende", state=self.staat, command=self.volgende, fg=self.NSwit, bg=self.NSblauw)
+        self.volgendeButton = Button(self.bovenframe,text="Volgende", state=self.staat, command=self.volgende, fg=self.NSwit, bg=self.NSblauw, font=("Helvetica", 10, "bold"))
         self.volgendeButton.grid(row=1,column=2)
         self.vertrektijden()
 
@@ -192,13 +192,13 @@ class NSApp():
             self.vertrekframe[m] = Frame(self.hoofdframe,height=120)
             self.vertrekframe[m].grid(row=1+m, columnspan=3,padx=5, pady=5)
             tijdLabel[m] = Label(self.vertrekframe[m],text=self.vertrektijd[n],fg="#1162BF",  font=self.tekstFont).grid(row=0, column=0,sticky=W)
-            eindbestemmingLabel[m] = Label(self.vertrekframe[m],text=self.eindbestemming[n],fg="#1162BF",font=('Courier',12, 'bold'), width=50).grid(row=0,column=1, columnspan=2)
-            vertrekspoorLabel[m] = Label(self.vertrekframe[m],text=self.vertrekspoor[n],fg=self.perronFg, font=('Courier',13, 'bold'), width=10).grid(row=0,column=3, sticky=E)
+            eindbestemmingLabel[m] = Label(self.vertrekframe[m],text=self.eindbestemming[n],fg="#1162BF",font=('Helvetica',12, 'bold'), width=50).grid(row=0,column=1, columnspan=2)
+            vertrekspoorLabel[m] = Label(self.vertrekframe[m],text=self.vertrekspoor[n],fg=self.perronFg, font=('Helvetica',13, 'bold'), width=10).grid(row=0,column=3, sticky=E)
             if self.vertraging[n] != "":
-                vertragingLabel[m] = Label(self.vertrekframe[m],text=self.vertraging[n],fg='red', font=('Courier',10, 'bold')).grid(row=1,column=0, sticky=W)
+                vertragingLabel[m] = Label(self.vertrekframe[m],text=self.vertraging[n],fg='red', font=('Helvetica',10, 'bold')).grid(row=1,column=0, sticky=W)
             vervoerderLabel[m] = Label(self.vertrekframe[m],text=self.vervoerder[n],fg="#1162BF", font=self.tekstFont).grid(row=1,column=1, sticky=W)
             treinsoortLabel[m] = Label(self.vertrekframe[m],text=self.treinsoort[n],fg="#1162BF", font=self.tekstFont).grid(row=1,column=2,sticky=W)
-            routetekstLabel[m] = Label(self.vertrekframe[m],text=self.routetekst[n], fg="#1162BF", font=('Courier',9)).grid(row=2,column=1,columnspan=3, sticky=W)
+            routetekstLabel[m] = Label(self.vertrekframe[m],text=self.routetekst[n], fg="#1162BF", font=('Helvetica',11)).grid(row=2,column=1,columnspan=3, sticky=W)
             n+=1
             m+=1
 
