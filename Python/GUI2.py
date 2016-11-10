@@ -3,6 +3,7 @@ import requests
 import xmltodict
 import csv
 import time
+import atexit
 
 
 
@@ -19,6 +20,7 @@ class NSApp():
 
         #constanten:
         self.locatieAutomaat = 'bd' #verander voor ander station
+        self.locatie = self.locatieAutomaat
         self.naamLang = NONE
         self.nummer = []
         self.ritnummer = []
@@ -46,6 +48,7 @@ class NSApp():
         self.labels()
         self.hoofdKnoppen()
         self.updateTijd()
+        atexit.register(self.veranderterug)
 
     def updateTijd(self):
         self.tijd.set(time.strftime("%H:%M:%S"))
@@ -63,7 +66,7 @@ class NSApp():
             i = 0
             schrijf = csv.writer(bestand, delimiter=';')
             schrijf.writerow(('nummer','ritnummer', 'vertrektijd', 'eindbestemming', 'treinsoort','vertrekspoor', 'spoorwijziging', 'vervoerder', 'routetekst','vertraging','reistip','opmerkingen'))
-            for vertrek in self.apicall('https://webservices.ns.nl/ns-api-avt?station='+self.locatieAutomaat)['ActueleVertrekTijden']['VertrekkendeTrein']:
+            for vertrek in self.apicall('https://webservices.ns.nl/ns-api-avt?station='+self.locatie)['ActueleVertrekTijden']['VertrekkendeTrein']:
                 eindbestemming = vertrek['EindBestemming']
                 ritnummer = vertrek['RitNummer']
                 vertrektijd = vertrek['VertrekTijd'] # 2016-09-27T18:36:00+0200
@@ -243,7 +246,7 @@ class NSApp():
             naamLang = station['Namen']['Lang']
             naamMiddel = station['Namen']['Middel']
             naamKort = station['Namen']['Kort']
-            if self.locatieAutomaat.upper() == code:
+            if self.locatie.upper() == code:
                 self.naamLang=naamLang
 
     def invoerFunctie(self):
@@ -264,6 +267,8 @@ class NSApp():
         self.terugKnop3.place_forget()
         self.invoerFrame.place_forget()
         self.venster1()
+    def veranderterug(self):
+        self.locatie = self.locatieAutomaat
 
 
 
