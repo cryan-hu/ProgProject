@@ -18,8 +18,8 @@ class NSApp():
 
 
         #constanten:
-        self.locatieAutomaat = 'ut' #verander voor ander station
-        self.naamLang = "Breda"
+        self.locatieAutomaat = 'bd' #verander voor ander station
+        self.naamLang = NONE
         self.nummer = []
         self.ritnummer = []
         self.vertrektijd = []
@@ -125,12 +125,12 @@ class NSApp():
         self.knoppenFrame.place_forget()
         self.knoppenFrame2=Frame(self.tk,bg=self.NSgeel)
         self.knoppenFrame2.place(anchor=NW,y=40)
-        self.ditStationKnop = Button(self.knoppenFrame2,text="Toon vertrektijden\ndit station",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4,command=self.venster2)
-        self.ditStationKnop.pack()
-        self.anderStationKnop = Button(self.knoppenFrame2,text="Toon vertrektijden\nander station",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4)
-        self.anderStationKnop.pack()
         self.terugKnop2 = Button(self.knoppenFrame2,text="Terug",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4,command=self.terug2)
-        self.terugKnop2.pack()
+        self.terugKnop2.pack(pady=(0,5))
+        self.ditStationKnop = Button(self.knoppenFrame2,text="Toon vertrektijden\ndit station",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4,command=self.venster2)
+        self.ditStationKnop.pack(pady=5)
+        self.anderStationKnop = Button(self.knoppenFrame2,text="Toon vertrektijden\nander station",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4, command=self.invoerFunctie)
+        self.anderStationKnop.pack(pady=(5,0))
     def venster2(self):
         self.knoppenFrame2.place_forget()
         self.terugKnop = Button(self.tk, text="Terug", font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4, command=self.terug)
@@ -165,11 +165,11 @@ class NSApp():
             self.staat = NORMAL
         else:
             self.staat = DISABLED
-        self.vorigeButton = Button(self.bovenframe,text="Vorige", state=DISABLED, command=self.vorige, fg=self.NSwit, bg=self.NSblauw, font=("Helvetica", 10, "bold"))
+        self.vorigeButton = Button(self.bovenframe,text="Vorige", state=DISABLED, command=self.vorige, fg=self.NSwit, bg=self.NSKnopBlauw, font=("Helvetica", 10, "bold"))
         self.vorigeButton.grid(row=1,column=0)
         tijdLabel = Label(self.bovenframe,textvariable=self.tijd, fg=self.NSwit, bg=self.NSblauw, font=("Helvetica", 10, "bold"))
         tijdLabel.grid(row=1,column=1)
-        self.volgendeButton = Button(self.bovenframe,text="Volgende", state=self.staat, command=self.volgende, fg=self.NSwit, bg=self.NSblauw, font=("Helvetica", 10, "bold"))
+        self.volgendeButton = Button(self.bovenframe,text="Volgende", state=self.staat, command=self.volgende, fg=self.NSwit, bg=self.NSKnopBlauw, font=("Helvetica", 10, "bold"))
         self.volgendeButton.grid(row=1,column=2)
         self.vertrektijden()
 
@@ -236,16 +236,38 @@ class NSApp():
                 opmerkingenLabel[m] = Label(self.vertrekframe[m],text=self.opmerkingen[n], fg="#1162BF", font=('Helvetica',10)).grid(row=4,column=1,columnspan=3, sticky=W)
             n+=1
             m+=1
+
     def stations(self):
-        with open('stations.csv', 'w', newline='', encoding='UTF-8') as bestand:
-            schrijf = csv.writer(bestand, delimiter=';')
-            schrijf.writerow(('code','naamLang','naamMiddel','naamKort'))
-            for station in self.apicall('http://webservices.ns.nl/ns-api-stations-v2')['Stations']['Station']:
-                code = station['Code']
-                naamLang = station['Namen']['Lang']
-                naamMiddel = station['Namen']['Middel']
-                naamKort = station['Namen']['Kort']
-                schrijf.writerow((code,naamLang,naamMiddel,naamKort))
+        for station in self.apicall('http://webservices.ns.nl/ns-api-stations-v2')['Stations']['Station']:
+            code = station['Code']
+            naamLang = station['Namen']['Lang']
+            naamMiddel = station['Namen']['Middel']
+            naamKort = station['Namen']['Kort']
+            if self.locatieAutomaat.upper() == code:
+                self.naamLang=naamLang
+
+    def invoerFunctie(self):
+        self.knoppenFrame2.place_forget()
+        self.terugKnop3 = Button(self.tk, text="Terug", font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4, command=self.terug3)
+        self.terugKnop3.place(anchor=NW,y=40)
+        self.invoerFrame = Frame(self.tk,bg=self.NSblauw)
+        self.invoerFrame.place(anchor=CENTER,relx=0.5,rely=0.5)
+        self.invoerLabel = Label(self.invoerFrame,text="Voer het station waarvan u de vertrektijden wil weten in",bg=self.NSblauw,fg=self.NSwit,font=self.fontHoofdknop)
+        self.invoerLabel.pack(padx=5, pady=5)
+        self.invoer = Entry(self.invoerFrame, bg="#ffffff",font=self.fontHoofdknop, fg=self.NSblauw)
+        self.invoer.pack(padx=5, pady=5,fill=X)
+        self.invoer.focus_set()
+        self.invoerButton = Button(self.invoerFrame,text="Bekijk vertrektijden station",bg=self.NSKnopBlauw,fg=self.NSwit,font=self.fontHoofdknop)
+        self.invoerButton.pack(padx=5, pady=5)
+
+    def terug3(self):
+        self.terugKnop3.place_forget()
+        self.invoerFrame.place_forget()
+        self.venster1()
+
+
+
+
 
 root = Tk()
 backgroundStart= PhotoImage(file="backgroundkleiner.png")
