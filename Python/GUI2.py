@@ -18,7 +18,7 @@ class NSApp():
 
 
         #constanten:
-        self.locatieAutomaat = 'bd' #verander voor ander station
+        self.locatieAutomaat = 'ac' #verander voor ander station
         self.naamLang = "Breda"
         self.nummer = []
         self.ritnummer = []
@@ -127,10 +127,8 @@ class NSApp():
         self.start = 0
 
 
-        self.hoofdframe= Frame(self.tk, bg=self.NSblauw,width=400, height=400)
+        self.hoofdframe= Frame(self.tk, bg=self.NSblauw, width=400, height=400)
         self.hoofdframe.pack(pady=(60, 120), side=TOP, expand=True, fill=Y)
-        self.hoofdframe= Frame(self.tk, bg=self.NSblauw)
-        self.hoofdframe.place(relx=0.5, rely=0.45, anchor=CENTER)
         self.bovenframe = Frame(self.hoofdframe,bg=self.NSblauw)
         self.bovenframe.grid(row=0,columnspan=4,padx=5, pady=5)
         tekst = "Vertrektijden {}".format(self.naamLang)
