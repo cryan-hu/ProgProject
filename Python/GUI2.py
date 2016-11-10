@@ -104,20 +104,33 @@ class NSApp():
         knop2.grid(row=0,column=1, padx=5, pady=5)
         knop3 = Button(self.knoppenFrame, text="Ik wil naar\nhet buitenland",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4)
         knop3.grid(row=0,column=2, padx=5, pady=5)
-        knop4 = Button(self.knoppenFrame, text="Toon actuele\nvertrektijden",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, command=self.venster2, width=20, height=4)
+        knop4 = Button(self.knoppenFrame, text="Toon actuele\nvertrektijden",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, command=self.venster1, width=20, height=4)
         knop4.grid(row=0,column=3, padx=5, pady=5)
 
-    def venster2(self):
+    def venster1(self):
         self.knoppenFrame.place_forget()
-        self.terugKnop = Button(self.tk, text="Terug", font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, command=self.terug)
-        self.terugKnop.pack(pady=18, side=LEFT)
+        self.knoppenFrame2=Frame(self.tk,bg=self.NSgeel)
+        self.knoppenFrame2.place(anchor=NW,y=60)
+        self.ditStationKnop = Button(self.knoppenFrame2,text="Toon vertrektijden\ndit station",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4,command=self.venster2)
+        self.ditStationKnop.pack()
+        self.anderStationKnop = Button(self.knoppenFrame2,text="Toon vertrektijden\nander station",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4)
+        self.anderStationKnop.pack()
+        self.terugKnop2 = Button(self.knoppenFrame2,text="Terug",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4,command=self.terug2)
+        self.terugKnop2.pack()
+    def venster2(self):
+        self.knoppenFrame2.place_forget()
+        self.terugKnop = Button(self.tk, text="Terug", font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4, command=self.terug)
+        self.terugKnop.place(anchor=NW,y=60)
         self.Layout()
 
     def terug(self):
         self.hoofdframe.pack_forget()
-        self.terugKnop.pack_forget()
-        self.hoofdKnoppen()
+        self.terugKnop.place_forget()
+        self.venster1()
 
+    def terug2(self):
+        self.knoppenFrame2.place_forget()
+        self.hoofdKnoppen()
 
     def Layout(self):
         self.tekstFont = ('Helvetica',12)
@@ -174,7 +187,6 @@ class NSApp():
             self.vorigeButton.config(state=DISABLED)
         self.vertrektijden()
 
-
     def vertrektijden(self):
         self.vertrekframe = list(range(self.lengteVertrek))
         tijdLabel = list(range(self.lengteVertrek))
@@ -193,28 +205,16 @@ class NSApp():
                 self.perronFg = "#1162BF"
             self.vertrekframe[m] = Frame(self.hoofdframe,height=120)
             self.vertrekframe[m].grid(row=1+m, columnspan=3,padx=5, pady=5)
-            tijdLabel[m] = Label(self.vertrekframe[m],text=self.vertrektijd[n],fg="#1162BF",  font=self.tekstFont).grid(row=0, column=0,sticky=W)
-            eindbestemmingLabel[m] = Label(self.vertrekframe[m],text=self.eindbestemming[n],fg="#1162BF",font=('Helvetica',12, 'bold'), width=50).grid(row=0,column=1, columnspan=2)
+            tijdLabel[m] = Label(self.vertrekframe[m],text=self.vertrektijd[n],fg="#1162BF",  font=self.tekstFont, width=6).grid(row=0, column=0,sticky=W)
+            eindbestemmingLabel[m] = Label(self.vertrekframe[m],text=self.eindbestemming[n],fg="#1162BF",font=('Helvetica',12, 'bold'), width=40).grid(row=0,column=1, columnspan=2)
             vertrekspoorLabel[m] = Label(self.vertrekframe[m],text=self.vertrekspoor[n],fg=self.perronFg, font=('Helvetica',13, 'bold'), width=10).grid(row=0,column=3, sticky=E)
             if self.vertraging[n] != "":
-                vertragingLabel[m] = Label(self.vertrekframe[m],text=self.vertraging[n],fg='red', font=('Helvetica',10, 'bold')).grid(row=1,column=0, sticky=W)
+                vertragingLabel[m] = Label(self.vertrekframe[m],text=self.vertraging[n],fg='red', font=('Helvetica',10, 'bold'),width=6).grid(row=1,column=0, sticky=W)
             vervoerderLabel[m] = Label(self.vertrekframe[m],text=self.vervoerder[n],fg="#1162BF", font=self.tekstFont).grid(row=1,column=1, sticky=W)
             treinsoortLabel[m] = Label(self.vertrekframe[m],text=self.treinsoort[n],fg="#1162BF", font=self.tekstFont).grid(row=1,column=2,sticky=W)
             routetekstLabel[m] = Label(self.vertrekframe[m],text=self.routetekst[n], fg="#1162BF", font=('Helvetica',11)).grid(row=2,column=1,columnspan=3, sticky=W)
             n+=1
             m+=1
-
-
-
-
-
-
-
-
-
-
-
-
 
 root = Tk()
 background= PhotoImage(file="backgroundkleiner.png")

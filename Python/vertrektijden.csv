@@ -1,51 +1,11 @@
 nummer;ritnummer;vertrektijd;eindbestemming;treinsoort;vertrekspoor;spoorwijziging;vervoerder;routetekst;vertraging
-0;17456;17:31;Breukelen;Sprinter;14;false;NS;;
-1;2858;17:32;Rotterdam Centraal;Intercity;8b;true;NS;Via Gouda, Alexander;
-2;9858;17:35;Den Haag Centraal;Sprinter;20;false;NS;Via Woerden, Gouda, Zoetermeer;
-3;5563;17:36;Baarn;Sprinter;1;false;NS;Via Overvecht, Den Dolder, Soest;
-4;1763;17:36;Enschede;Intercity;11;false;NS;Via Amersfoort, Apeldoorn, Deventer;
-5;863;17:37;Maastricht;Intercity;18;false;NS;Via s-Hertogenbosch, Eindhoven, Weert;
-6;3163;17:38;Nijmegen;Intercity;19;false;NS;Via Driebergen-Zeist, Ede-Wageningen, Arnhem C.;
-7;4962;17:40;Almere Oostvaarders;Sprinter;3;false;NS;Via Overvecht, Hilversum, Naarden-B;
-8;3058;17:40;Den Helder;Intercity;5;false;NS;Via Amstel, Amsterdam CS, A'dam Sloterdijk;+1 min
-9;16065;17:42;Breda;Sprinter;21;false;NS;Via Houten, Geldermalsen, s-Hertogenbosch;
-10;7463;17:43;Rhenen;Sprinter;15;false;NS;Via Maarn, Veenendaal C.;+2 min
-11;3560;17:43;Schiphol Airport;Intercity;7;false;NS;Via Bijlmer ArenA, A'dam Zuid;+1 min
-12;2058;17:44;Den Haag Centraal;Intercity;20;false;NS;Via Gouda;
-13;12558;17:47;Rotterdam Centraal;Intercity;8;false;NS;Via Gouda, Alexander;
-14;7458;17:47;Uitgeest;Sprinter;14;false;NS;Via Breukelen, Duivendrecht, Amsterdam CS;
-15;563;17:50;Groningen;Intercity;11;false;NS;Via Amersfoort, Zwolle, Assen;
-16;6158;17:50;Woerden;Sprinter;20;false;NS;;
-17;5663;17:50;Zwolle;Sprinter;4;false;NS;Via Overvecht, Den Dolder, Amersfoort;
-18;3563;17:53;Heerlen;Intercity;18;false;NS;Via s-Hertogenbosch, Eindhoven, Weert;
-19;3063;17:53;Nijmegen;Intercity;19;false;NS;Via De Klomp, Ede-Wageningen, Arnhem C.;
-20;860;17:55;Alkmaar;Intercity;7;false;NS;Via Amstel, Amsterdam CS, A'dam Sloterdijk;
-21;8860;17:55;Leiden Centraal;Intercity;20;false;NS;Via Woerden, Alphen a/d Rijn, Lammenschans;
-22;5762;17:55;Weesp;Sprinter;3;false;NS;Via Overvecht, Hilversum;
-23;17463;17:56;Veenendaal Centrum;Sprinter;15;false;NS;Via Maarn;
-24;6065;17:57;Tiel;Sprinter;21;false;NS;Via Houten, Geldermalsen;
-25;3160;17:58;Schiphol Airport;Intercity;5;false;NS;Via Bijlmer ArenA, A'dam Zuid;
-26;11760;17:59;Den Haag Centraal;Intercity;8;false;NS;Via Gouda;
-27;17458;18:01;Breukelen;Sprinter;14;false;NS;;
-28;2860;18:02;Rotterdam Centraal;Intercity;8;false;NS;Via Gouda, Alexander;
-29;9860;18:05;Den Haag Centraal;Sprinter;20;false;NS;Via Woerden, Gouda, Zoetermeer;
-30;11763;18:06;Amersfoort Schothorst;Intercity;11;false;NS;Via Amersfoort;
-31;5565;18:06;Baarn;Sprinter;1;false;NS;Via Overvecht, Den Dolder, Soest;
-32;865;18:07;Maastricht;Intercity;18;false;NS;Via s-Hertogenbosch, Eindhoven, Weert;
-33;3165;18:08;Nijmegen;Intercity;19;false;NS;Via Driebergen-Zeist, Ede-Wageningen, Arnhem C.;
-34;4964;18:10;Almere Oostvaarders;Sprinter;3;false;NS;Via Overvecht, Hilversum, Naarden-B;
-35;3060;18:10;Den Helder;Intercity;5;false;NS;Via Amstel, Amsterdam CS, A'dam Sloterdijk;
-36;16067;18:12;Breda;Sprinter;21;false;NS;Via Houten, Geldermalsen, s-Hertogenbosch;
-37;7465;18:13;Rhenen;Sprinter;15;false;NS;Via Maarn, Veenendaal C.;
-38;3562;18:13;Schiphol Airport;Intercity;7;false;NS;Via Bijlmer ArenA, A'dam Zuid;
-39;2060;18:14;Den Haag Centraal;Intercity;20;false;NS;Via Gouda;
-40;7460;18:17;Breukelen;Sprinter;14;false;NS;;
-41;560;18:17;Rotterdam Centraal;Intercity;8;false;NS;Via Gouda, Alexander;
-42;12565;18:20;Leeuwarden;Intercity;11;false;NS;Via Amersfoort, Zwolle, Steenwijk;
-43;6160;18:20;Woerden;Sprinter;20;false;NS;;
-44;5665;18:20;Zwolle;Sprinter;2;false;NS;Via Overvecht, Den Dolder, Amersfoort;
-45;3565;18:23;Heerlen;Intercity;18;false;NS;Via s-Hertogenbosch, Eindhoven, Weert;
-46;3065;18:23;Nijmegen;Intercity;19;false;NS;Via De Klomp, Ede-Wageningen, Arnhem C.;
-47;862;18:25;Alkmaar;Intercity;7;false;NS;Via Amstel, Amsterdam CS, A'dam Sloterdijk;
-48;8862;18:25;Leiden Centraal;Intercity;20;false;NS;Via Woerden, Alphen a/d Rijn, Lammenschans;
-49;5764;18:25;Weesp;Sprinter;3;false;NS;Via Overvecht, Hilversum;
+0;4062;18:49;Uitgeest;Sprinter;2;false;NS;Via Duivendrecht, Amsterdam CS, A'dam Sloterdijk;+1 min
+1;7469;18:50;Rhenen;Sprinter;3;false;NS;Via Breukelen, Utrecht C, Maarn;
+2;4071;19:10;Rotterdam Centraal;Sprinter;3;false;NS;Via Breukelen, Woerden, Gouda;
+3;4064;19:19;Uitgeest;Sprinter;2;false;NS;Via Duivendrecht, Amsterdam CS, A'dam Sloterdijk;
+4;4073;19:40;Rotterdam Centraal;Sprinter;3;false;NS;Via Breukelen, Woerden, Gouda;
+5;4066;19:49;Uitgeest;Sprinter;2;false;NS;Via Duivendrecht, Amsterdam CS, A'dam Sloterdijk;
+6;4075;20:10;Rotterdam Centraal;Sprinter;3;false;NS;Via Breukelen, Woerden, Gouda;
+7;4068;20:19;Uitgeest;Sprinter;2;false;NS;Via Duivendrecht, Amsterdam CS, A'dam Sloterdijk;
+8;4077;20:40;Rotterdam Centraal;Sprinter;3;false;NS;Via Breukelen, Woerden, Gouda;
+9;4070;20:49;Uitgeest;Sprinter;2;false;NS;Via Duivendrecht, Amsterdam CS, A'dam Sloterdijk;
