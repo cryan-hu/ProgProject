@@ -3,6 +3,7 @@ import requests
 import xmltodict
 import csv
 import time
+import string
 
 
 class NSApp():
@@ -11,11 +12,11 @@ class NSApp():
         self.tk.title("NS App")
         self.tk.resizable(width=False, height=False)
         self.tk.geometry("1024x768")
-        self.achtergrond = Label(self.tk, image=backgroundStart, text="hello")
+        self.achtergrond = Label(self.tk, image=backgroundStart)
         self.achtergrond.place(x=0, y=0, relwidth=1, relheight=1)
 
         #constanten:
-        self.locatieAutomaat = 'bd' #verander voor ander station
+        self.locatieAutomaat = 'bd' #verander naar de code van de locatie van de automaat
         self.tijd = StringVar(value=time.strftime("%H:%M:%S"))
         self.NSgeel = "#fece22"
         self.NSblauw = "#002272"
@@ -255,9 +256,9 @@ class NSApp():
         self.naamKort = []
         for station in self.apicall('http://webservices.ns.nl/ns-api-stations-v2')['Stations']['Station']:
             self.codes.append(station['Code'])
-            self.naamLang.append(station['Namen']['Lang'])
-            self.naamMiddel.append(station['Namen']['Middel'])
-            self.naamKort.append(station['Namen']['Kort'])
+            self.naamLang.append(string.capwords(station['Namen']['Lang']))
+            self.naamMiddel.append(string.capwords(station['Namen']['Middel']))
+            self.naamKort.append(string.capwords(station['Namen']['Kort']))
 
     def invoerFunctie(self):
         self.knoppenFrame2.place_forget()
@@ -279,16 +280,17 @@ class NSApp():
 
     def verifieer(self):
         self.terugKnop3.place_forget()
-        if self.stationVar.get() in self.naamLang:
-            self.locatie = self.codes[self.naamLang.index(self.stationVar.get())]
+        stad = string.capwords(self.stationVar.get())
+        if stad in self.naamLang:
+            self.locatie = self.codes[self.naamLang.index(stad)]
             self.tussenstap()
-        elif self.stationVar.get() in self.naamMiddel:
-            self.locatie = self.codes[self.naamMiddel.index(self.stationVar.get())]
+        elif stad in self.naamMiddel:
+            self.locatie = self.codes[self.naamMiddel.index(stad)]
             self.tussenstap()
-        elif self.stationVar.get() in self.naamKort:
-            self.locatie = self.codes[self.naamKort.index(self.stationVar.get())]
+        elif stad in self.naamKort:
+            self.locatie = self.codes[self.naamKort.index(stad)]
             self.tussenstap()
-        elif self.stationVar.get() == "":
+        elif stad == "":
             self.waarschuwingVar.set("Voer een station in!")
         else:
             self.waarschuwingVar.set("Geen geldig station!")
