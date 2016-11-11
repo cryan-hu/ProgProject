@@ -1,5 +1,5 @@
 # ProgProject
-Miniproject A1 Reisinformatiesysteem NS, projectweek 1, HBO-ICT Hogeschool Utrecht
+Miniproject A1 Reisinformatiesysteem NS, projectweek 1, HBO-ICT Hogeschool Utrecht, 2016
 Klas: TICT-ICT-V1J
 
 De volgende studenten waren betrokken bij dit project:
