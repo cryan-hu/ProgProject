@@ -1,0 +1,51 @@
+nummer;ritnummer;vertrektijd;eindbestemming;treinsoort;vertrekspoor;spoorwijziging;vervoerder;routetekst;vertraging
+0;221;19:02;Frankfurt (M) H;ICE International;12;true;NS International;Via Arnhem C., Dusseldorf, Koln Hbf;+68 min
+1;6073;19:57;Tiel;Sprinter;21;false;NS;Via Houten, Geldermalsen;
+2;3168;19:58;Schiphol Airport;Intercity;5;false;NS;Via Bijlmer ArenA, A'dam Zuid;
+3;11768;19:59;Den Haag Centraal;Intercity;8;true;NS;Via Gouda;
+4;2868;20:02;Rotterdam Centraal;Intercity;9;true;NS;Via Gouda, Alexander;
+5;122;20:03;Amsterdam Centraal;ICE International;7;false;NS International;;+52 min
+6;9868;20:04;Den Haag Centraal;Sprinter;21;true;NS;Via Woerden, Gouda, Zoetermeer;
+7;0;20:06;Amersfoort;Intercity;11;false;NS;;
+8;11771;20:06;Amersfoort Schothorst;Intercity;11;false;NS;Via Amersfoort;
+9;5573;20:06;Baarn;Sprinter;1;false;NS;Via Overvecht, Den Dolder, Soest;
+10;873;20:07;Maastricht;Intercity;18;false;NS;Via s-Hertogenbosch, Eindhoven, Weert;
+11;3173;20:08;Nijmegen;Intercity;19;false;NS;Via Driebergen-Zeist, Ede-Wageningen, Arnhem C.;
+12;4972;20:10;Almere Oostvaarders;Sprinter;3;false;NS;Via Overvecht, Hilversum, Naarden-B;
+13;3068;20:10;Den Helder;Intercity;5;false;NS;Via Amstel, Amsterdam CS, A'dam Sloterdijk;+2 min
+14;16075;20:12;Breda;Sprinter;21;false;NS;Via Houten, Geldermalsen, s-Hertogenbosch;
+15;7473;20:13;Rhenen;Sprinter;15;false;NS;Via Maarn, Veenendaal C.;
+16;3570;20:13;Schiphol Airport;Intercity;7;false;NS;Via Bijlmer ArenA, A'dam Zuid;
+17;2068;20:14;Den Haag Centraal;Intercity;20;false;NS;Via Gouda;
+18;7468;20:17;Breukelen;Sprinter;14;false;NS;;
+19;568;20:17;Rotterdam Centraal;Intercity;8;false;NS;Via Gouda, Alexander;
+20;12573;20:20;Leeuwarden;Intercity;11;false;NS;Via Amersfoort, Zwolle, Steenwijk;
+21;5673;20:20;Zwolle;Sprinter;2;false;NS;Via Overvecht, Den Dolder, Amersfoort;
+22;3573;20:23;Eindhoven;Intercity;18;false;NS;Via s-Hertogenbosch;
+23;3073;20:23;Nijmegen;Intercity;19;false;NS;Via De Klomp, Ede-Wageningen, Arnhem C.;
+24;870;20:25;Amsterdam Centraal;Intercity;7;false;NS;Via Amstel;
+25;8870;20:25;Leiden Centraal;Intercity;20;true;NS;Via Woerden, Alphen a/d Rijn, Lammenschans;
+26;5772;20:25;Weesp;Sprinter;3;false;NS;Via Overvecht, Hilversum;
+27;6075;20:27;Tiel;Sprinter;21;true;NS;Via Houten, Geldermalsen;
+28;3170;20:28;Schiphol Airport;Intercity;5;false;NS;Via Bijlmer ArenA, A'dam Zuid;
+29;1770;20:29;Den Haag Centraal;Intercity;8;false;NS;Via Gouda;
+30;2870;20:32;Rotterdam Centraal;Intercity;8;false;NS;Via Gouda, Alexander;
+31;9870;20:34;Den Haag Centraal;Sprinter;12;false;NS;Via Woerden, Gouda, Zoetermeer;
+32;5575;20:36;Baarn;Sprinter;1;false;NS;Via Overvecht, Den Dolder, Soest;
+33;1775;20:36;Enschede;Intercity;11;false;NS;Via Amersfoort, Apeldoorn, Deventer;
+34;875;20:37;Maastricht;Intercity;18;false;NS;Via s-Hertogenbosch, Eindhoven, Weert;
+35;3175;20:38;Nijmegen;Intercity;19;false;NS;Via Driebergen-Zeist, Ede-Wageningen, Arnhem C.;
+36;3070;20:40;Den Helder;Intercity;5;false;NS;Via Amstel, Amsterdam CS, A'dam Sloterdijk;
+37;16077;20:42;Breda;Sprinter;21;false;NS;Via Houten, Geldermalsen, s-Hertogenbosch;
+38;7475;20:43;Rhenen;Sprinter;15;false;NS;Via Maarn, Veenendaal C.;
+39;3572;20:43;Schiphol Airport;Intercity;7;false;NS;Via Bijlmer ArenA, A'dam Zuid;
+40;2070;20:44;Den Haag Centraal;Intercity;20;false;NS;Via Gouda;
+41;7470;20:47;Breukelen;Sprinter;14;false;NS;;
+42;12570;20:47;Rotterdam Centraal;Intercity;8;false;NS;Via Gouda, Alexander;
+43;575;20:50;Groningen;Intercity;11;false;NS;Via Amersfoort, Zwolle, Assen;
+44;5675;20:50;Zwolle;Sprinter;2;false;NS;Via Overvecht, Den Dolder, Amersfoort;
+45;3075;20:53;Nijmegen;Intercity;19;false;NS;Via De Klomp, Ede-Wageningen, Arnhem C.;
+46;872;20:55;Amsterdam Centraal;Intercity;7;false;NS;Via Amstel;
+47;8872;20:55;Leiden Centraal;Intercity;20;true;NS;Via Woerden, Alphen a/d Rijn, Lammenschans;
+48;5774;20:55;Weesp;Sprinter;3;false;NS;Via Overvecht, Hilversum;
+49;6077;20:57;Tiel;Sprinter;20;false;NS;Via Houten, Geldermalsen;
