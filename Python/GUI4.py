@@ -179,11 +179,11 @@ class NSApp():
         else:
             self.staat = DISABLED
         self.vorigeButton = Button(self.bovenframe,text="Vorige", state=DISABLED, command=self.vorige, fg=self.NSwit, activeforeground=self.NSblauw, bg=self.NSKnopBlauw, font=("Helvetica", 10, "bold"))
-        self.vorigeButton.grid(row=1,column=0)
+        self.vorigeButton.grid(row=1,column=0,padx=30)
         tijdLabel = Label(self.bovenframe,textvariable=self.tijd, fg=self.NSwit, bg=self.NSblauw, font=("Helvetica", 15, "bold"))
         tijdLabel.grid(row=1,column=1)
         self.volgendeButton = Button(self.bovenframe,text="Volgende", state=self.staat, command=self.volgende, activeforeground=self.NSblauw, fg=self.NSwit, bg=self.NSKnopBlauw, font=("Helvetica", 10, "bold"))
-        self.volgendeButton.grid(row=1,column=2)
+        self.volgendeButton.grid(row=1,column=2,padx=30)
         self.vertrektijden()
 
     def volgende(self):
