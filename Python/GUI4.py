@@ -279,15 +279,17 @@ class NSApp():
         self.invoerButton.pack(padx=5, pady=5)
 
     def verifieer(self):
-        self.terugKnop3.place_forget()
         stad = string.capwords(self.stationVar.get())
         if stad in self.naamLang:
+            self.terugKnop3.place_forget()
             self.locatie = self.codes[self.naamLang.index(stad)]
             self.tussenstap()
         elif stad in self.naamMiddel:
+            self.terugKnop3.place_forget()
             self.locatie = self.codes[self.naamMiddel.index(stad)]
             self.tussenstap()
         elif stad in self.naamKort:
+            self.terugKnop3.place_forget()
             self.locatie = self.codes[self.naamKort.index(stad)]
             self.tussenstap()
         elif stad == "":
