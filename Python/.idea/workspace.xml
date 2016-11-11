@@ -47,8 +47,8 @@
       <file leaf-file-name="GUI4.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GUI4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="291" column="12" selection-start-line="291" selection-start-column="12" selection-end-line="291" selection-end-column="12" />
+            <state relative-caret-position="206">
+              <caret line="265" column="53" selection-start-line="265" selection-start-column="42" selection-end-line="265" selection-end-column="53" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -901,8 +901,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="291" column="12" selection-start-line="291" selection-start-column="12" selection-end-line="291" selection-end-column="12" />
+        <state relative-caret-position="206">
+          <caret line="265" column="53" selection-start-line="265" selection-start-column="42" selection-end-line="265" selection-end-column="53" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>

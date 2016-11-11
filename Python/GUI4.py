@@ -26,6 +26,7 @@ class NSApp():
         self.tekstFont = ('Helvetica',12)
         self.lengteVertrek = 6
         self.toppadding = 20
+        self.naarStart = Button(self.tk,text="Terug naar beginscherm",font=self.fontHoofdknop, activeforeground="red", bg="red", fg=self.NSwit, width=20, command=self.naarStartFunctie)
 
         self.stations()
         self.hoofdKnoppen()
@@ -106,27 +107,26 @@ class NSApp():
     def hoofdKnoppen(self):
         self.knoppenFrame = Frame(self.tk,bg=self.NSgeel)
         self.knoppenFrame.place(relx=0.5, rely=0.75, anchor=CENTER)
-        knop1 = Button(self.knoppenFrame, text="Kopen\nlos kaartje",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4)
+        knop1 = Button(self.knoppenFrame, text="Kopen\nlos kaartje",font=self.fontHoofdknop, bg=self.NSKnopBlauw, activeforeground=self.NSblauw, fg=self.NSwit, width=20, height=4)
         knop1.grid(row=0,column=0, padx=5, pady=5)
-        knop2 = Button(self.knoppenFrame, text="Kopen\nOV-Chipkaart",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4)
+        knop2 = Button(self.knoppenFrame, text="Kopen\nOV-Chipkaart",font=self.fontHoofdknop, bg=self.NSKnopBlauw, activeforeground=self.NSblauw, fg=self.NSwit, width=20, height=4)
         knop2.grid(row=0,column=1, padx=5, pady=5)
-        knop3 = Button(self.knoppenFrame, text="Ik wil naar\nhet buitenland",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4)
+        knop3 = Button(self.knoppenFrame, text="Ik wil naar\nhet buitenland",font=self.fontHoofdknop, bg=self.NSKnopBlauw, activeforeground=self.NSblauw, fg=self.NSwit, width=20, height=4)
         knop3.grid(row=0,column=2, padx=5, pady=5)
-        knop4 = Button(self.knoppenFrame, text="Toon actuele\nvertrektijden",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, command=self.opties, width=20, height=4)
+        knop4 = Button(self.knoppenFrame, text="Toon actuele\nvertrektijden",font=self.fontHoofdknop, bg=self.NSKnopBlauw, activeforeground=self.NSblauw, fg=self.NSwit, command=self.opties, width=20, height=4)
         knop4.grid(row=0,column=3, padx=5, pady=5)
 
     def opties(self):
         self.achtergrond.config(image=backgroundLeeg)
         self.knoppenFrame.place_forget()
-        self.naarStart = Button(self.tk,text="Terug naar beginscherm",font=self.fontHoofdknop, bg="red", fg=self.NSwit, width=20, command=self.naarStartFunctie)
         self.naarStart.place(anchor=SE,rely=1,relx=1,height=58)
         self.knoppenFrame2=Frame(self.tk,bg=self.NSgeel)
         self.knoppenFrame2.place(anchor=NW,y=self.toppadding)
-        self.terugKnop2 = Button(self.knoppenFrame2,text="Terug",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4,command=self.terug2)
+        self.terugKnop2 = Button(self.knoppenFrame2,text="Terug",font=self.fontHoofdknop, bg=self.NSKnopBlauw, activeforeground=self.NSblauw, fg=self.NSwit, width=20, height=4,command=self.terug2)
         self.terugKnop2.pack(pady=(0,5))
-        self.ditStationKnop = Button(self.knoppenFrame2,text="Toon vertrektijden\ndit station",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4,command=self.ditStation)
+        self.ditStationKnop = Button(self.knoppenFrame2,text="Toon vertrektijden\ndit station",font=self.fontHoofdknop, activeforeground=self.NSblauw, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4,command=self.ditStation)
         self.ditStationKnop.pack(pady=5)
-        self.anderStationKnop = Button(self.knoppenFrame2,text="Toon vertrektijden\nander station",font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4, command=self.invoerFunctie)
+        self.anderStationKnop = Button(self.knoppenFrame2,text="Toon vertrektijden\nander station",font=self.fontHoofdknop, activeforeground=self.NSblauw, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4, command=self.invoerFunctie)
         self.anderStationKnop.pack(pady=(5,0))
 
     def ditStation(self):
@@ -136,7 +136,7 @@ class NSApp():
         self.vertrektijdenCsv()
         self.labels()
         self.knoppenFrame2.place_forget()
-        self.terugKnop = Button(self.tk, text="Terug", font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4, command=self.terug)
+        self.terugKnop = Button(self.tk, text="Terug", font=self.fontHoofdknop, activeforeground=self.NSblauw, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4, command=self.terug)
         self.terugKnop.place(anchor=NW,y=self.toppadding)
         self.Layout()
 
@@ -150,6 +150,7 @@ class NSApp():
         self.achtergrond.config(image=backgroundStart)
         self.knoppenFrame2.place_forget()
         self.hoofdKnoppen()
+
 
     def terug3(self):
         self.terugKnop3.place_forget()
@@ -177,11 +178,11 @@ class NSApp():
             self.staat = NORMAL
         else:
             self.staat = DISABLED
-        self.vorigeButton = Button(self.bovenframe,text="Vorige", state=DISABLED, command=self.vorige, fg=self.NSwit, bg=self.NSKnopBlauw, font=("Helvetica", 10, "bold"))
+        self.vorigeButton = Button(self.bovenframe,text="Vorige", state=DISABLED, command=self.vorige, fg=self.NSwit, activeforeground=self.NSblauw, bg=self.NSKnopBlauw, font=("Helvetica", 10, "bold"))
         self.vorigeButton.grid(row=1,column=0)
         tijdLabel = Label(self.bovenframe,textvariable=self.tijd, fg=self.NSwit, bg=self.NSblauw, font=("Helvetica", 10, "bold"))
         tijdLabel.grid(row=1,column=1)
-        self.volgendeButton = Button(self.bovenframe,text="Volgende", state=self.staat, command=self.volgende, fg=self.NSwit, bg=self.NSKnopBlauw, font=("Helvetica", 10, "bold"))
+        self.volgendeButton = Button(self.bovenframe,text="Volgende", state=self.staat, command=self.volgende, activeforeground=self.NSblauw, fg=self.NSwit, bg=self.NSKnopBlauw, font=("Helvetica", 10, "bold"))
         self.volgendeButton.grid(row=1,column=2)
         self.vertrektijden()
 
@@ -262,7 +263,7 @@ class NSApp():
 
     def invoerFunctie(self):
         self.knoppenFrame2.place_forget()
-        self.terugKnop3 = Button(self.tk, text="Terug", font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4, command=self.terug3)
+        self.terugKnop3 = Button(self.tk, text="Terug", font=self.fontHoofdknop, activeforeground=self.NSblauw, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4, command=self.terug3)
         self.terugKnop3.place(anchor=NW,y=self.toppadding)
         self.invoerFrame = Frame(self.tk,bg=self.NSKnopBlauw)
         self.invoerFrame.place(anchor=CENTER,relx=0.5,rely=0.5)
@@ -275,7 +276,7 @@ class NSApp():
         self.invoer = Entry(self.invoerFrame, bg="#ffffff",font=self.fontHoofdknop, fg=self.NSKnopBlauw,textvariable=self.stationVar)
         self.invoer.pack(padx=5, pady=5,fill=X)
         self.invoer.focus_set()
-        self.invoerButton = Button(self.invoerFrame,text="Bekijk vertrektijden station",bg=self.NSblauw,fg=self.NSwit,font=self.fontHoofdknop,command=self.verifieer)
+        self.invoerButton = Button(self.invoerFrame,text="Bekijk vertrektijden station",bg=self.NSblauw,fg=self.NSwit, activeforeground=self.NSblauw,font=self.fontHoofdknop,command=self.verifieer)
         self.invoerButton.pack(padx=5, pady=5)
 
     def verifieer(self):
@@ -303,12 +304,11 @@ class NSApp():
         self.vertrektijdenCsv()
         self.labels()
         self.invoerFrame.place_forget()
-        self.terugKnop4 = Button(self.tk, text="Terug", font=self.fontHoofdknop, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4, command=self.terug4)
+        self.terugKnop4 = Button(self.tk, text="Terug", font=self.fontHoofdknop, activeforeground=self.NSblauw, bg=self.NSKnopBlauw, fg=self.NSwit, width=20, height=4, command=self.terug4)
         self.terugKnop4.place(anchor=NW,y=self.toppadding)
         self.Layout()
 
     def naarStartFunctie(self):
-        self.naarStart.place_forget()
         try:
             self.hoofdframe.pack_forget()
         except:
@@ -337,6 +337,7 @@ class NSApp():
             self.invoerFrame.place_forget()
         except:
             pass
+        self.naarStart.place_forget()
         self.achtergrond.config(image=backgroundStart)
         self.knoppenFrame.place(relx=0.5, rely=0.75, anchor=CENTER)
 

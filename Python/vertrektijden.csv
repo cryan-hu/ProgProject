@@ -1,15 +1,15 @@
 nummer;ritnummer;vertrektijd;eindbestemming;treinsoort;vertrekspoor;spoorwijziging;vervoerder;routetekst;vertraging;reistip;opmerkingen
-0;13656;15:54;Utrecht Centraal;Sprinter;4;false;NS;Via Tilburg, s-Hertogenbosch, Geldermalsen;;;
-1;943;15:57;Amsterdam Centraal;Intercity direct;5;false;NS;Via Rotterdam C., Schiphol Airport;;;
-2;1954;16:09;Den Haag Centraal;Intercity;7;false;NS;Via Dordrecht, Rotterdam C., Delft;;;
-3;3658;16:10;Zwolle;Intercity;3;false;NS;Via Tilburg, s-Hertogenbosch, Oss;;;
-4;5056;16:12;Den Haag Centraal;Sprinter;6;false;NS;Via Lage Zwaluwe, Dordrecht, Rotterdam C.;;;
-5;3653;16:20;Roosendaal;Intercity;7;false;NS;Via Etten-Leur;;;
-6;1957;16:21;Venlo;Intercity;3;false;NS;Via Tilburg, Eindhoven, Helmond;;;
-7;13658;16:24;Utrecht Centraal;Sprinter;4;false;NS;Via Tilburg, s-Hertogenbosch, Geldermalsen;;;
-8;945;16:27;Amsterdam Centraal;Intercity direct;5;false;NS;Via Rotterdam C., Schiphol Airport;;;
-9;1956;16:39;Den Haag Centraal;Intercity;7;false;NS;Via Dordrecht, Rotterdam C., Delft;;;
-10;3660;16:40;Zwolle;Intercity;3;false;NS;Via Tilburg, s-Hertogenbosch, Oss;;;
-11;5058;16:42;Den Haag Centraal;Sprinter;6;false;NS;Via Lage Zwaluwe, Dordrecht, Rotterdam C.;;;
-12;3655;16:50;Roosendaal;Intercity;7;false;NS;Via Etten-Leur;;;
-13;1959;16:51;Venlo;Intercity;3;false;NS;Via Tilburg, Eindhoven, Helmond;;;
+0;945;16:27;Amsterdam Centraal;Intercity direct;5;false;NS;Via Rotterdam C., Schiphol Airport;;;
+1;1956;16:39;Den Haag Centraal;Intercity;7;false;NS;Via Dordrecht, Rotterdam C., Delft;;;
+2;3660;16:40;Zwolle;Intercity;3;false;NS;Via Tilburg, s-Hertogenbosch, Oss;;;
+3;5058;16:42;Den Haag Centraal;Sprinter;6;false;NS;Via Lage Zwaluwe, Dordrecht, Rotterdam C.;;;
+4;3655;16:50;Roosendaal;Intercity;7;false;NS;Via Etten-Leur;;;
+5;1959;16:51;Venlo;Intercity;3;false;NS;Via Tilburg, Eindhoven, Helmond;;;
+6;13660;16:54;Utrecht Centraal;Sprinter;4;false;NS;Via Tilburg, s-Hertogenbosch, Geldermalsen;;;
+7;947;16:57;Amsterdam Centraal;Intercity direct;5;false;NS;Via Rotterdam C., Schiphol Airport;;;Rijdt vandaag niet
+8;1958;17:09;Den Haag Centraal;Intercity;7;false;NS;Via Dordrecht, Rotterdam C., Delft;;;
+9;3662;17:10;Zwolle;Intercity;3;false;NS;Via Tilburg, s-Hertogenbosch, Oss;;;
+10;5060;17:12;Den Haag Centraal;Sprinter;6;false;NS;Via Lage Zwaluwe, Dordrecht, Rotterdam C.;;;
+11;3657;17:20;Roosendaal;Intercity;7;false;NS;Via Etten-Leur;;;
+12;1961;17:21;Venlo;Intercity;3;false;NS;Via Tilburg, Eindhoven, Helmond;;;
+13;13662;17:24;Utrecht Centraal;Sprinter;4;false;NS;Via Tilburg, s-Hertogenbosch, Geldermalsen;;;
