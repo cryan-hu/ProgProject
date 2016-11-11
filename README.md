@@ -1,7 +1,5 @@
 # ProgProject
-README
-
-Project Reisinformatiesysteem NS, projectweek 1, HBO-ICT Hogeschool Utrecht
+Miniproject A1 Reisinformatiesysteem NS, projectweek 1, HBO-ICT Hogeschool Utrecht
 Klas: TICT-ICT-V1J
 
 De volgende studenten waren betrokken bij dit project:
@@ -21,6 +19,7 @@ Als uitbreiding hierop moet het ook mogelijk zijn om voor een ander Nederlands s
 Het team heeft als antwoord op deze vraag een GUI ontwikkeld die in de wensen van de NS voorziet.
 
 Dit project bevat bestanden met ontwerpen (workflows), verschillende documentatie en de Python bestanden die de code voor het project bevatten.
-Het eindresultaat van de ontwikkelde code is opgeslagen onder de naam: GUI4(FINAL_VERSION_PROJECT)
+De uiteindelijke bestanden kunnen worden gevonden in het mapje met dezelfde naam.
+Het eindresultaat van de ontwikkelde code is opgeslagen onder de naam: GUI4(FINAL_VERSION_PROJECT).py in het mapje code.
 
 In de map CODE bevindt zich een README.TXT over het gebruik van de code.
