@@ -1,15 +1,17 @@
 nummer;ritnummer;vertrektijd;eindbestemming;treinsoort;vertrekspoor;spoorwijziging;vervoerder;routetekst;vertraging;reistip;opmerkingen
-0;945;16:27;Amsterdam Centraal;Intercity direct;5;false;NS;Via Rotterdam C., Schiphol Airport;;;
-1;1956;16:39;Den Haag Centraal;Intercity;7;false;NS;Via Dordrecht, Rotterdam C., Delft;;;
-2;3660;16:40;Zwolle;Intercity;3;false;NS;Via Tilburg, s-Hertogenbosch, Oss;;;
-3;5058;16:42;Den Haag Centraal;Sprinter;6;false;NS;Via Lage Zwaluwe, Dordrecht, Rotterdam C.;;;
-4;3655;16:50;Roosendaal;Intercity;7;false;NS;Via Etten-Leur;;;
-5;1959;16:51;Venlo;Intercity;3;false;NS;Via Tilburg, Eindhoven, Helmond;;;
-6;13660;16:54;Utrecht Centraal;Sprinter;4;false;NS;Via Tilburg, s-Hertogenbosch, Geldermalsen;;;
-7;947;16:57;Amsterdam Centraal;Intercity direct;5;false;NS;Via Rotterdam C., Schiphol Airport;;;Rijdt vandaag niet
-8;1958;17:09;Den Haag Centraal;Intercity;7;false;NS;Via Dordrecht, Rotterdam C., Delft;;;
-9;3662;17:10;Zwolle;Intercity;3;false;NS;Via Tilburg, s-Hertogenbosch, Oss;;;
-10;5060;17:12;Den Haag Centraal;Sprinter;6;false;NS;Via Lage Zwaluwe, Dordrecht, Rotterdam C.;;;
-11;3657;17:20;Roosendaal;Intercity;7;false;NS;Via Etten-Leur;;;
-12;1961;17:21;Venlo;Intercity;3;false;NS;Via Tilburg, Eindhoven, Helmond;;;
-13;13662;17:24;Utrecht Centraal;Sprinter;4;false;NS;Via Tilburg, s-Hertogenbosch, Geldermalsen;;;
+0;4056;17:26;Uitgeest;Sprinter;3;false;NS;Via Duivendrecht, Amsterdam CS, A'dam Sloterdijk;;;
+1;3563;17:30;Heerlen;Intercity;7;false;NS;Via Utrecht C, s-Hertogenbosch, Eindhoven;;;
+2;3558;17:30;Schiphol Airport;Intercity;2;false;NS;Via A'dam Zuid;;;
+3;4065;17:34;Rotterdam Centraal;Sprinter;6;false;NS;Via Breukelen, Woerden, Gouda;;;
+4;7465;17:43;Rhenen;Sprinter;6;false;NS;Via Breukelen, Utrecht C, Maarn;;;
+5;3165;17:45;Nijmegen;Intercity;7;false;NS;Via Utrecht C, Driebergen-Zeist, Ede-Wageningen;;;
+6;3158;17:45;Schiphol Airport;Intercity;2;false;NS;Via A'dam Zuid;;;
+7;7456;17:46;Uitgeest;Sprinter;3;false;NS;Via Duivendrecht, Amsterdam CS, A'dam Sloterdijk;+2 min;;
+8;4058;17:56;Uitgeest;Sprinter;3;false;NS;Via Duivendrecht, Amsterdam CS, A'dam Sloterdijk;;;
+9;3565;18:00;Heerlen;Intercity;7;false;NS;Via Utrecht C, s-Hertogenbosch, Eindhoven;;;
+10;3560;18:00;Schiphol Airport;Intercity;2;false;NS;Via A'dam Zuid;;;
+11;4067;18:04;Rotterdam Centraal;Sprinter;6;false;NS;Via Breukelen, Woerden, Gouda;;;
+12;7467;18:13;Rhenen;Sprinter;6;false;NS;Via Breukelen, Utrecht C, Maarn;;;
+13;3167;18:15;Nijmegen;Intercity;7;false;NS;Via Utrecht C, Driebergen-Zeist, Ede-Wageningen;;;
+14;3160;18:15;Schiphol Airport;Intercity;2;false;NS;Via A'dam Zuid;;;
+15;7458;18:16;Uitgeest;Sprinter;3;false;NS;Via Duivendrecht, Amsterdam CS, A'dam Sloterdijk;;;

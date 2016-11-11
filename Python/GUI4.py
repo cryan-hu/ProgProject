@@ -173,14 +173,14 @@ class NSApp():
         self.bovenframe = Frame(self.hoofdframe,bg=self.NSblauw)
         self.bovenframe.grid(row=0,columnspan=4,padx=5, pady=5)
         tekst = "Vertrektijden {}".format(self.naam)
-        stationLabel = Label(self.bovenframe,text=tekst,font=('Helvetica',18,"bold"),fg=self.NSwit,bg=self.NSblauw).grid(row=0,columnspan=3)
+        stationLabel = Label(self.bovenframe,text=tekst,font=('Helvetica',20,"bold"),fg=self.NSwit,bg=self.NSblauw).grid(row=0,columnspan=3)
         if self.lengte > self.lengteVertrek:
             self.staat = NORMAL
         else:
             self.staat = DISABLED
         self.vorigeButton = Button(self.bovenframe,text="Vorige", state=DISABLED, command=self.vorige, fg=self.NSwit, activeforeground=self.NSblauw, bg=self.NSKnopBlauw, font=("Helvetica", 10, "bold"))
         self.vorigeButton.grid(row=1,column=0)
-        tijdLabel = Label(self.bovenframe,textvariable=self.tijd, fg=self.NSwit, bg=self.NSblauw, font=("Helvetica", 10, "bold"))
+        tijdLabel = Label(self.bovenframe,textvariable=self.tijd, fg=self.NSwit, bg=self.NSblauw, font=("Helvetica", 15, "bold"))
         tijdLabel.grid(row=1,column=1)
         self.volgendeButton = Button(self.bovenframe,text="Volgende", state=self.staat, command=self.volgende, activeforeground=self.NSblauw, fg=self.NSwit, bg=self.NSKnopBlauw, font=("Helvetica", 10, "bold"))
         self.volgendeButton.grid(row=1,column=2)
